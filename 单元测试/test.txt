@@ -1,0 +1,17 @@
+test_run (__main__.MyTest) ... ok
+test_run1 (__main__.MyTest) ... FAIL
+test_run2 (__main__.MyTest) ... ok
+test_run3 (__main__.MyTest) ... ok
+
+======================================================================
+FAIL: test_run1 (__main__.MyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "单元测试03生成报告.py", line 25, in test_run1
+    self.assertIs(1,2)
+AssertionError: 1 is not 2
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
