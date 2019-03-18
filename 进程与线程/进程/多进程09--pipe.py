@@ -25,11 +25,13 @@ if __name__ == "__main__":
     #p3 = multiprocessing.Process(target=proc3, args=(pipe[1],))
 
     p1.start()
-    p1.join()
+
     p2.start()
     #p3.start()
 
+    p1.join()
 
-    p2.join()
+    p2.terminate()
+    print('over')
     
     #p3.join()

@@ -1,2 +1,7 @@
 from mysingleton import singleton
-singleton.foo()
+a=singleton
+b=singleton
+
+print(id(a))
+print(id(b))
+print(a is b)

@@ -1,8 +1,9 @@
-class Rectangle:
+class Rectangle(object):
+
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, '_instance'):
-            cls._instance = super().__new__(cls)  # super()方法是调用其父类，即object
-
+            cls._instance = super(Rectangle,cls).__new__(cls)  # super()方法是调用其父类，即object
+            #或者cls._instance = object.__new__(cls)  # super()方法是调用其父类，即object
             return cls._instance
         else:
 
@@ -19,7 +20,7 @@ class Rectangle:
 
 a = Rectangle(4, 6)
 b = Rectangle(5, 7)
-print(a, b)
+print(a is b)
 
 # 上述代码可以发现，在第一次实例化时，我们会用一个私有属性_instance去
 # 接收父类new方法开辟的内存，并返回。当我们第二次实例化时，

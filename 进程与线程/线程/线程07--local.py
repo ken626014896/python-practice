@@ -6,7 +6,9 @@
 import threading
 
 local = threading.local()
+
 local.tname = 'main'
+
 
 
 def func():

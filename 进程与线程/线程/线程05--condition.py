@@ -54,5 +54,6 @@ class Consumers(threading.Thread):
 
 p = Producer()
 c = Consumers()
+
 p.start()
 c.start()
