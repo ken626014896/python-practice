@@ -7,8 +7,10 @@ a=[1,2,3]
 
 b=map(xx,a)
 
+
 for i in b:
     print(i)
+
 
 
 if '__iter__' in dir(b):

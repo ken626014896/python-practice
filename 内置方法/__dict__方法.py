@@ -8,6 +8,8 @@ a=Test()
 
 print(Test.__dict__)
 print(a.__dict__)
+#比较类的dict  和实例的dict
+print(dir(a))
 # print(dir(Test))
 # print('====')
 # print(dir(a))

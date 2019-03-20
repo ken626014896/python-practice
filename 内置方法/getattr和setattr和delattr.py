@@ -1,6 +1,7 @@
 class Student:
     def __getattr__(self, item):
         print('访问一个不存在的属性时候触发')
+        print(item)
         return '不存在'
 
     def __setattr__(self, key, value):
@@ -14,6 +15,11 @@ class Student:
             del self.__dict__[item]
 
 stu = Student()
+print('================')
 stu.name = 'zlw'  # 设置一个属性值的时候触发
+print('================')
+print(stu.name)
+print('================')
 print(stu.noexit)  # 访问一个不存在的属性时候触发 , 返回'不存在'
+print('================')
 del stu.name  # 删除一个属性的时候触发

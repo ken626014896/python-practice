@@ -12,4 +12,4 @@ for i in a:
 
     b.append(chr(a_in_num))
 
-print(b)
+print(''.join(b))
