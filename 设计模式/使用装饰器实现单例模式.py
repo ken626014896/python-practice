@@ -10,17 +10,17 @@ def Singmoshi(func):
     return warpper
 
 @Singmoshi
-class aa:
+class singlclass:
 
     a=1
     def __init__(self,x,a):
         self.x=x
         self.a=a
 
-a=aa(550,2)
-b=aa(5500,3)
+a=singlclass(550,2)
+b=singlclass(5500,3)
 
 print(a.x)
-print(b.x)
+print(b.x)   ## b的初始化带来的属性不会覆盖掉a的属性哦！返回的都是第一次初始化的对象
 print(a.a)
 print(b.a)
