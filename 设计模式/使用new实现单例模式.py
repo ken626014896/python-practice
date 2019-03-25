@@ -1,6 +1,7 @@
 class Rectangle(object):
 
     def __new__(cls, *args, **kwargs):
+        print(cls)
         if not hasattr(cls, '_instance'):
             cls._instance = super(Rectangle,cls).__new__(cls)  # super()方法是调用其父类，即object
             #或者cls._instance = object.__new__(cls)  # super()方法是调用其父类，即object
@@ -12,14 +13,16 @@ class Rectangle(object):
     def __init__(self, Length, Width):
         self.Length = Length
         self.Width = Width
-        print(self.Width)
+        print(self.Width+self.Length)
 
     def A(self):
-        print(self.Length)
+        return self.Width+self.Length
 
 
 a = Rectangle(4, 6)
 b = Rectangle(5, 7)
+print(a.A())  ## b的初始化带来的属性会覆盖掉a的属性。
+print(b.A())
 print(a is b)
 
 # 上述代码可以发现，在第一次实例化时，我们会用一个私有属性_instance去
